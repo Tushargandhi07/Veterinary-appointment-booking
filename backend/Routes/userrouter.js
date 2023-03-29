@@ -11,14 +11,13 @@ userRouter.post("/register",async(req,res)=>{
     try {
         bcrypt.hash(password,4,async(err,hashedPassword)=>{
             req.body.password=hashedPassword
-            console.log(req.body);
             let user=new UserModel(req.body)
             await user.save();
             res.send({"mess":"User Registered Successfull"})
         })
     } catch (error) {
         console.log({"Error":error.message});
-        res.send({"Error":error.message})
+        res.send({"Error":error.message});
     }   
 })
 
@@ -29,7 +28,7 @@ userRouter.post("/login",async(req,res)=>{
         bcrypt.compare(password, user[0].password, (err, result)=> {
             if(result){
                 const token = jwt.sign({ userID: user[0]._id }, process.env.secret); //,{ expiresIn:60*60}
-                res.send({"message":"Login Successful","Token":token})
+                res.send({"message":"Login Successful","Token":token,"User":user[0]})
             }else{
                 res.send(JSON.stringify("Wrong Credentials"))
             }
@@ -40,6 +39,17 @@ userRouter.post("/login",async(req,res)=>{
 })
 
 
+userRouter.patch("/update",async(req,res)=>{
+    try {
+        let newdata=req.body;
+        let id=req.query.id;
+        let user=await UserModel.findByIdAndUpdate({_id:id},newdata);
+        res.send({"mess":"User Details Updated"})
+    } catch (error) {
+        res.send({"Error":error.message})
+    }
+
+})
 
 
 module.exports={userRouter}
