@@ -1,0 +1,74 @@
+#nav{
+    background-color:#6037d4 ;
+    color:rgb(242, 225, 225);
+    padding:3px
+}
+
+#after-nav{
+    display:flex;
+    height:100%
+    
+}
+
+#after-nav-col-1{
+    width:20%;
+    background-color: #6037d4;
+    height:650px;
+    color: rgb(242, 225, 225);
+}
+
+#after-nav-col-2{
+    width:80%;
+    display: flex;
+    
+    justify-content: center;
+}
+
+.row{
+    border: 2px solid #4106e1;
+    padding:4px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   transition:  transform 0.5s
+}
+
+.row:hover{
+    transform:translateY(-10px);
+    
+  }
+
+#dog-image{
+    margin-top: 200px;
+}
+#dog-image img{
+    width:500px
+}
+a{
+    text-decoration: none;
+}
+
+.remove-doctor{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+#rm-row-1{
+    margin-left: 30%;
+    font-size: 30px;
+}
+
+#rm-row-2{
+    margin-left:40%;
+    margin-top: 20px;
+}
+#remove-input{
+    height:50px;
+    width:200px
+}
+
+.add-form{
+    margin-top: 30px;
+    border: 1px solid black;
+    border-radius: 20px;
+    padding:10px
+}
