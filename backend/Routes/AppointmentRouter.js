@@ -34,4 +34,19 @@ AppointmentRouter.post("/create",async(req,res)=>{
     }
 })
 
+
+AppointmentRouter.patch("/update/:id",async(req,res)=>{
+    let payload=req.body;
+    let paramid=req.params.id;
+        try {
+            let updated=await AppointmentModel.findByIdAndUpdate({_id:paramid},payload)
+            res.send({"mess":"Status Updated"})
+        } catch (error) {
+            // console.log(error);
+            res.send({"Error":error.message})
+        }
+    
+})
+
+
 module.exports={AppointmentRouter}
