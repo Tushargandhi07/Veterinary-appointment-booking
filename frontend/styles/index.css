@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* form.nosubmit {
+    border: none;
+    padding: 0;
+}
+
+input.nosubmit {
+    width: 260px;
+    border: 1px solid #555;
+    display: block;
+    padding: 9px 4px 9px 40px;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+} */
+
+
+/* =================== Hero Section ======================== */
+
+.hero-section {
+    width: 100%;
+    height: 100vh;
+    background-color: #f3f7ff;
+    position: relative;
+}
+
+.hero-section-div {
+    width: 600px;
+    margin-left: 152px;
+    position: absolute;
+    left: 0px;
+}
+
+.hero-section-div h5 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    font-weight: 300;
+    color: #4b5563;
+}
+
+.hero-section-div h1 {
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -1.5px;
+    background: rgb(89, 79, 234);
+    background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 64%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-section-div p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    margin-top: 16px;
+    font-weight: 300;
+}
+
+.hero-section-div a {
+    background: linear-gradient(to right, #e54391 0%, #c0135f 100%);
+    width: 320px;
+    padding: 20px;
+    border-radius: 6px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+
+.hero-section-img {
+    width: 740px;
+    height: 100%;
+    background-image: url(../assets/vetster-telemedicine-app.webp);
+    clip-path: polygon(18% 0, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    right: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+
+.book-with-confidence {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.book-with-confidence-innerText {
+    max-width: 700px;
+    margin: 60px auto;
+    font-size: 30px;
+    line-height: 36px;
+    color: #5e5f6c;
+}
+
+.book-with-confidence-innerText span {
+    color: #544dcf;
+    font-weight: 500;
+}
+
+.book-with-confidence-innerDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 10px 20px;
+}
+
+.book-with-confidence-innerDiv img {
+    margin-bottom: 50px;
+}
+
+.book-with-confidence-innerDiv h3 {
+    font-size: 20px;
+    line-height: 26px;
+    color: #252f3f;
+    padding: 16px 0;
+    font-weight: 500;
+}
+
+.book-with-confidence-innerDiv p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #374151;
+}
+
+.book-with-confidence>p {
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: 300;
+    color: #374151;
+    margin: 20px auto;
+}
+
+.banner-div {
+    width: 80%;
+    height: 200px;
+    margin: 80px auto;
+    background: rgb(228, 70, 144);
+    background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%);
+    border-radius: 10px;
+    padding: 0 40px;
+}
+
+.banner-div div img {
+    width: 180px;
+}
+
+.banner-innerDiv {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.banner-innerDiv h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+
+.banner-innerDiv p {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 8px auto;
+}
