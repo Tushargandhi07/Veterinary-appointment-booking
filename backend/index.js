@@ -1,7 +1,8 @@
 const express=require('express');
 const cors=require('cors');
 const { connection } = require("./config/db");
-const {userRouter} = require("./Routes/userrouter")
+const {userRouter} = require("./Routes/UserRouter")
+const {AppointmentRouter} = require("./Routes/AppointmentRouter")
 const {authenticator}  = require("./Middleware/authenticator")
 require('dotenv').config();
 
@@ -13,6 +14,8 @@ app.use(cors());
 app.use('/user',userRouter);
 
 app.use(authenticator)
+
+app.use("/appointment",AppointmentRouter)
 
 app.get('/',(req,res)=>{
     res.send("Server is Working")
@@ -27,4 +30,5 @@ app.listen(process.env.port,async()=>{
     } catch (error) {
         console.log('Error while connecting to DB');
     } 
+    console.log("Server Running on port "+process.env.port);
 })
