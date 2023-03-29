@@ -10,7 +10,7 @@ const authenticator=(req,res,next)=>{
                 res.send(JSON.stringify("Please Login"))
             }else{
                 // console.log(decoded)
-                // req.body.userID=decoded.userID
+                req.body.userID=decoded.userID
                 next()
             }
         })
@@ -19,5 +19,5 @@ const authenticator=(req,res,next)=>{
         console.log("Please Login First")
         res.send(JSON.stringify("Please Login again"))
     }
-}
+}  
 module.exports={authenticator}
