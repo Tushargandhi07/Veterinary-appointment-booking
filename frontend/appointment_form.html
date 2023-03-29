@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Book Appointment</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="styles/appointment_form.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="heading">
+                    Appointment
+                </h2>
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Full Name
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="text" id="name" class="form-control" placeholder="enter full name" required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Email
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="email" id="email" class="form-control" placeholder="enter email" required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Contact No.
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="number" id="phone" class="form-control" placeholder="enter contact number"
+                                required>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Doctor Name
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <select name="doctor" id="doctor" class="form-control" required>
+                                <option value="">select doctor</option>
+                                <option value="pardeep gupta">Dr.Pardeep Gupta</option>
+                                <option value="subhash mittal">Dr. Subhash Mittal</option>
+                                <option value="gaurav sharma">Dr. Gaurav Sharma</option>
+                                <option value="vivek jindal">Dr. Vivek Jindal</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Category
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <select name="category" id="category" class="form-control" required>
+                                <option value="">select category</option>
+                                <option value="dog">Dog</option>
+                                <option value="cat">Cat</option>
+                            </select>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Date
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="date" id="date" class="form-control">
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Time
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <input type="time" id="time" class="form-control">
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row">
+                        <label class="col-sm-4">
+                            Symptoms
+                        </label>
+                        <div class="col-sm-8 col-lg-8">
+                            <textarea id="symptoms" class="form-control" required></textarea>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="form-group row justify-content-end">
+                        <div class="col-sm-5">
+                            <button class="form_btn" type="submit">
+                                Book Now
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="col-md-6">
+                <img src="https://www.rd.com/wp-content/uploads/2021/03/GettyImages-1133605325-scaled-e1617227898456.jpg?fit=696,463"
+                    alt="">
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="scripts/appointment_form.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+
+</html>
