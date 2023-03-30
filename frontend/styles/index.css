@@ -177,3 +177,29 @@ input.nosubmit {
     line-height: 24px;
     margin: 8px auto;
 }
+
+.pet-parents {
+    text-align: center;
+}
+
+.pet-parents h1 {
+    font-size: 48px;
+    letter-spacing: -1.2px;
+    background: rgb(89, 79, 234);
+    background: linear-gradient(90deg, #c0135f 0%, #544dcf);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pet-parents div {
+    width: 46%;
+    margin: 20px auto;
+}
+
+.pet-parents div p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    font-weight: 300;
+}
