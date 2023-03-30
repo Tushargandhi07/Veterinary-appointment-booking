@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Appointment</title>
+    <link rel="stylesheet" href="./styles/admin.css">
+</head>
+<body>
+    <div id="nav">
+        <h1>Manage Appointments</h1>
+ </div>
+ <div id="after-nav">
+     <div id="after-nav-col-1" >
+        <div class="row">
+         <a href="./admin.html"> <h2>Dashboard</h2></a>
+        </div>
+        <div class="row">
+         <a href="./manage-appointment.html"> <h2>Manage Appointments</h2></a>   
+         </div>
+         <div class="row">
+             <a href="./add-doctor.html"><h2>Add Veterinarian</h2></a>    
+         </div>
+         <div class="row">
+             <a href="./remove-doctor.html"> <h2>Remove Veterinarian</h2></a>   
+         </div>
+
+     </div>
+     <div id="after-nav-col-2" class="side-part appointment">
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th scope="col">Appointment Id</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Time</th>
+                    <th scope="col">Status</th>
+                </tr>
+            </thead>
+            <tbody id="appointment">
+            </tbody>
+        </table>
+     </div>
+ </div>
+ <script src="./scripts/mange-appointment.js"></script>
+</body>
+</html>
