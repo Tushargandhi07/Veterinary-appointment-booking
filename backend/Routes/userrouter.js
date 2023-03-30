@@ -20,7 +20,7 @@ userRouter.post("/register",async(req,res)=>{
         res.send({"Error":error.message});
     }   
 })
-
+//asd
 userRouter.post("/login",async(req,res)=>{
     let {email,password}=req.body;
     let user=await UserModel.find({email});
@@ -32,6 +32,7 @@ userRouter.post("/login",async(req,res)=>{
             }else{
                 res.send(JSON.stringify("Wrong Credentials"))
             }
+            //sdadasdasdas
         });
     }else{
         res.send(JSON.stringify("Wrong Credentials"))
