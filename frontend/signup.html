@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/signup.css">
+    <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
+    <title>Sign Up | Vetcare</title>
+</head>
+
+<body>
+    <div class="container">
+        <main class="signup-container">
+            <p class="text-mute">START FOR FREE</p>
+            <h1 class="heading-primary">Create new account<span class="custom-dot">.</span></h1>
+            <p class="text-mute">Already a member? <a href="./login.html">Log in</a></p>
+            <form class="signup-form">
+                <div class="f-row input-wrapper">
+                    <label class="inp">
+                        <input type="text" class="input-text" placeholder="&nbsp;">
+                        <span class="label">First name</span>
+                        <span class="input-icon"><i class="fa-solid fa-address-card"></i></span>
+                    </label>
+                    <label class="inp">
+                        <input type="text" class="input-text" placeholder="&nbsp;">
+                        <span class="label">Last name</span>
+                        <span class="input-icon"><i class="fa-solid fa-address-card"></i></span>
+                    </label>
+                </div>
+                <label class="inp">
+                    <input type="email" class="input-text" placeholder="&nbsp;">
+                    <span class="label">Email</span>
+                    <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+                </label>
+                <label class="inp">
+                    <input type="password" class="input-text" placeholder="&nbsp;" id="password">
+                    <span class="label">Password</span>
+                    <span class="input-icon input-icon-password" data-password><i class="fa-solid fa-eye"></i></span>
+                </label>
+                <button class="btn btn-signup">Create account</button>
+            </form>
+        </main>
+        <div class="welcome-container">
+            <h1 class="heading-secondary">Welcome to <span class="lg">Vetcare!</span></h1>
+            <img src="./assets/Petting.svg" alt="">
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script src="./scripts/signup.js"></script>

@@ -1,15 +1,9 @@
-const Data = [{ id: 5454551212112151, date: "1-1-2023", time: "12:30", status: "accepted" },
-{ id: 974551212112151, date: "2-1-2023", time: "16:30", status: "rejected" },
-{ id: 4564551212112151, date: "3-1-2023", time: "12:00", status: "accepted" },
-{ id: 1224551212112151, date: "4-1-2023", time: "11:30", status: "rejected" },];
-
-
 function display(data) {
     const tbody = document.getElementById("tbody");
     data.forEach(element => {
         let row = document.createElement("tr");
         let col1 = document.createElement("td");
-        col1.innerText = element.id;
+        col1.innerText = element._id;
         let col2 = document.createElement("td");
         col2.innerText = element.date;
         let col3 = document.createElement("td");
@@ -20,4 +14,30 @@ function display(data) {
         tbody.append(row);
     });
 }
-display(Data);
+async function getData() {
+    let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
+    let userId = "6424876482876b59a0587dab"
+    if(userId  && key){
+        try {
+            let res = await fetch("http://localhost:7500/appointment/get", {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization":`${key}`,
+                    "id":`${userId}`
+                },
+            })
+            let data = await res.json();
+            console.log(data);
+            display(data);
+        } catch (error) {
+            console.log(error);
+        }
+       
+    }
+    else{
+        swal("Please login again");
+    }
+    
+}
+getData();
