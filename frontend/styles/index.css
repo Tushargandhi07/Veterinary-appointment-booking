@@ -13,6 +13,37 @@
     align-items: center;
 }
 
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .fa-bars,
+.navbar-scroll .navar-brand {
+    color: #4f4f4f;
+}
+
+.navbar-scroll .nav-link:hover {
+    color: #1266f1;
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .fa-bars,
+.navbar-scrolled .navar-brand {
+    color: #4f4f4f;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scroll,
+.navbar-scrolled {
+    background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+
 /* form.nosubmit {
     border: none;
     padding: 0;
@@ -109,15 +140,15 @@ input.nosubmit {
     color: #5e5f6c;
 }
 
-.book-with-confidence-innerText span {
+.book-with-confidence-innerText>span {
     color: #544dcf;
     font-weight: 500;
 }
 
 .book-with-confidence-innerDiv {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 25px;
     padding: 10px 20px;
 }
 
@@ -150,12 +181,12 @@ input.nosubmit {
 
 .banner-div {
     width: 80%;
-    height: 200px;
+    min-height: 200px;
     margin: 80px auto;
     background: rgb(228, 70, 144);
     background: linear-gradient(90deg, rgba(228, 70, 144, 1) 0%, rgba(89, 79, 234, 1) 100%);
     border-radius: 10px;
-    padding: 0 40px;
+    padding: 20px 40px;
 }
 
 .banner-div div img {
@@ -202,4 +233,179 @@ input.nosubmit {
     line-height: 28px;
     color: #4b5563;
     font-weight: 300;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(calc(-250px * 7))
+    }
+}
+
+#logos-home-page {
+    width: 100%;
+    /* margin-bottom: 500px; */
+}
+
+
+#logos-home-page .slider {
+    /* height: 800px; */
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+#logos-home-page .slider:after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+#logos-home-page .slider:before {
+    left: 0;
+    top: 0;
+}
+
+#logos-home-page .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(250px * 8);
+    gap: 30px;
+}
+
+.slide {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.ratings i {
+    font-size: 18px;
+    margin: 20px 3px;
+    color: #e54391;
+}
+
+.slide-innerText {
+    line-height: 24px;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.circle {
+    border-radius: 50%;
+    background: rgb(102, 109, 239);
+    background: linear-gradient(90deg, rgba(102, 109, 239, 1) 0%, rgba(87, 41, 187, 1) 100%);
+    margin-right: 10px;
+}
+
+.circle i {
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+}
+
+.rater {
+    display: flex;
+    align-items: center;
+}
+
+.raterDetail {
+    text-align: left;
+}
+
+.raterDetail h4 {
+    display: inline-block;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+
+.raterDetail p {
+    color: #5e5f6c;
+}
+
+.pet-connection {
+    width: 85%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.pet-connection h1 {
+    font-size: 48px;
+    letter-spacing: -1.2px;
+    background: #83dfbd;
+    background: linear-gradient(90deg, #0051ff 0%, #00ffa2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pet-connection-innerDiv {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.pet-connection>div>p {
+    font-size: 20px;
+    line-height: 28px;
+    color: #4b5563;
+    font-weight: 300;
+}
+
+.pet-connection>div>p>span {
+    color: #544dcf;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 10px 20px;
+    text-align: left;
+}
+
+.grid-card>div {
+    padding: 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
+}
+
+.grid-card>div:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 20px;
+    transition: .5s;
+}
+
+.grid-card img {
+    width: 100%;
+    height: 250px;
+}
+
+.grid-card>div>h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin: 20px auto;
+    color: #161e2e;
+}
+
+.grid-card>div>p {
+    font-size: 16px;
+    line-height: 24px;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+.grid-card>div>a {
+    text-decoration: none;
+    color: #c0135f;
+}
+
+.grid-card>div>a:hover {
+    color: #0051ff;
 }
