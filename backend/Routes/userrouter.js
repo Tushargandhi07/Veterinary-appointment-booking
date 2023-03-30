@@ -1,6 +1,7 @@
 const express = require("express");
 const {UserModel}=require('../Models/UserModel')
 const jwt=require("jsonwebtoken");
+const {client} = require("../config/redisDB");
 require("dotenv").config();
 const bcrypt=require("bcrypt");
 
