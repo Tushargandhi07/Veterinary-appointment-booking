@@ -32,21 +32,24 @@ async function getAppointment(event){
             symtoms: symtoms,
             category: category
         }
-        // let response = await fetch("http://localhost:3000/appointments", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json"
-        //     },
-        //     body: JSON.stringify(appointment)
-        // });
-        // if(response.status == 200){
-        //     window.location.href = "http://localhost:3000/appointments";
-        // }
-        // else{
-        //     alert("Something went wrong");
-        // }
-        console.log(appointment)
-        window.location.href = "appointment_list.html"
-
+        let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
+        let response = await fetch("http://localhost:7500/appointment/create", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization":`${key}`
+            },
+            body: JSON.stringify(appointment)
+        });
+        let data= await response.json();
+            if(data=="Please Login again"){
+                swal("Please login again");
+            }
+            else if(data=="Appointment Created"){
+                swal("Appointment created","","success");
+            }
+            else{
+                swal("Slot Not Available","Try a diffrent time slot","error");
+            }
     }
 }
