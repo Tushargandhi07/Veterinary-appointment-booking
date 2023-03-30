@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Doctor</title>
+    <title>Add Veterinarian</title>
     <link rel="stylesheet" href="styles/admin.css"> 
     </style>
 </head>
@@ -18,7 +18,7 @@
             <a href="./admin.html"> <h2>Dashboard</h2></a>
            </div>
            <div class="row">
-            <a href=""> <h2>All Appointment</h2></a>   
+            <a href="./manage-appointment.html"> <h2>Manage Appointments</h2></a>   
             </div>
             <div class="row">
                 <a href="./add-doctor.html"><h2>Add Veterinarian</h2></a>    
@@ -28,32 +28,35 @@
             </div>
 
         </div>
-        <div id="after-nav-col-2" >
+        <div id="after-nav-col-2" class="side-part" >
             <div>
                 <div class="add-form">
-                    <h1>Add Veterinarian</h1>
-                    <div>
-                       <label>Name</label>
-                        <input placeholder="Name"/>
+                    <div class="heading">
+                        <h1>Add Veterinarian</h1>
                     </div>
-                    <div>
-                        <label>Gender</label>
-                        <input placeholder="Gender"/>
+                    
+                    <div class="ad-row">
+                       <label>Name:</label>
+                        <input id="name" placeholder="Name" type="text" required/>
                     </div>
-                    <div>
-                        <label>Date of Birth</label>
-                       <input placeholder="D.O.B"/>
+                    <div  class="ad-row">
+                        <label>Gender:</label>
+                        <input id="gender" placeholder="Gender" type="text" required/>
                     </div>
-                    <div>
-                     <label>Experience</label>
-                    <input placeholder="experience"/>
+                    <div  class="ad-row">
+                        <label>Date of Birth:</label>
+                       <input id="d.o.b" placeholder="D.O.B" type="date"  required/>
                     </div>
-                    <div>
-                     <label>Specialization</label>
-                    <input placeholder="Specialization"/>
+                    <div  class="ad-row">
+                     <label>Experience:</label>
+                    <input id="experience" placeholder="experience" type="number"  required/>
                     </div>
-                    <div>
-                     <button>ADD</button>
+                    <div  class="ad-row">
+                     <label>Specialization:</label>
+                    <input id="specialization" placeholder="Specialization" type="text"  required/>
+                    </div >
+                    <div  class="ad-row">
+                     <button id="btn1" class="add-btn btn">ADD</button>
                     </div>
                     
                     
@@ -62,5 +65,7 @@
              </div>
             </div>
         </div>
+
+        <script src="./scripts/admin.js"></script>
 </body>
 </html>

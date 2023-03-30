@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Doctor</title>
+    <title>Remove Veterinarian</title>
     <link rel="stylesheet" href="styles/admin.css"> 
     </style>
 </head>
@@ -18,7 +18,7 @@
             <a href="./admin.html"> <h2>Dashboard</h2></a>
            </div>
            <div class="row">
-            <a href=""> <h2>All Appointment</h2></a>   
+            <a href="./manage-appointment.html"> <h2>Manage Appointments</h2></a>   
             </div>
             <div class="row">
                 <a href="./add-doctor.html"><h2>Add Veterinarian</h2></a>    
@@ -28,15 +28,50 @@
             </div>
 
         </div>
-        <div id="after-nav-col-2" class="remove-doctor">
-            <div id="rm-row-1" class="rm-rows">
-                <label>Veterinarian's Name</label>
-                
-              <input id="remove-input" placeholder="Doctor's Name"/>       
-            </div>
-            <div id="rm-row-2" class="rm-rows">
-                <button>Remove</button> 
+        <div id="after-nav-col-2" class="side-part remove">
+            <div>
+                <div class="add-form">
+                    <div class="heading">
+                        <h1>Remove Veterinarian</h1>
+                    </div>
+                    
+                    <div class="ad-row">
+                       <label>ID:</label>
+                        <input placeholder="ID" id="id"/>
+                    </div>
+                    <div  class="ad-row">
+                     <button id="btn2" class="remove-btn btn">REMOVE</button>
+                    </div>
+                    
+                    
+                    
+              
+             </div>
             </div>
         </div>
+        <script >
+            
+               let btn2 = document.getElementById("btn2")
+                  btn2.addEventListener("click",(event)=>{
+                  event.preventDefault();
+                  let all_input = document.querySelector(".add-form input")
+                let id = all_input.value;
+                 dellete(id);
+    
+                })
+
+                function dellete(id){
+                        fetch(``,{
+                        method:"PUT"
+                       })
+                        .then(res=>res.json())
+                        .then(res=>{
+                           res.send("successfully deleted")
+                           alert("veternaian removed successfully")
+                        })
+                    }
+                
+                   
+        </script>
 </body>
 </html>
