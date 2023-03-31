@@ -21,14 +21,15 @@ userRouter.post("/register",async(req,res)=>{
         res.send({"Error":error.message});
     }   
 })
-//asd
+//asd 
 userRouter.post("/login",async(req,res)=>{
     let {email,password}=req.body;
     let user=await UserModel.find({email});
     if(user.length>0){
-        bcrypt.compare(password, user[0].password, (err, result)=> {
+        bcrypt.compare(password, user[0].password, async(err, result)=> {
             if(result){
                 const token = jwt.sign({ userID: user[0]._id }, process.env.secret); //,{ expiresIn:60*60}
+                client.HSET("tokensObj" , email , token)
                 res.send({"message":"Login Successful","Token":token,"User":user[0]})
             }else{
                 res.send(JSON.stringify("Wrong Credentials"))
@@ -36,7 +37,7 @@ userRouter.post("/login",async(req,res)=>{
             //sdadasdasdas
         });
     }else{
-        res.send(JSON.stringify("Wrong Credentials"))
+        res.send(JSON.stringify("Wrong Credentials")) 
     }
 })
 
