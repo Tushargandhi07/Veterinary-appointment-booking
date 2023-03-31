@@ -1,3 +1,19 @@
+import { navbar, footer } from "../components/navbar.js";
+let navbarContainer = document.getElementById("navbar");
+let footerContainer = document.getElementById("footer");
+
+// Navbar
+navbarContainer.innerHTML = navbar();
+footerContainer.innerHTML = footer();
+
+// Home redirect
+let logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+
+// Display user profile
 function display(data) {
     const tbody = document.getElementById("tbody");
     data.forEach(element => {
@@ -24,16 +40,17 @@ function display(data) {
     });
 }
 async function getData() {
-    let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
-    let userId = "6424876482876b59a0587dab"
-    let email="tushargan07@gmail.com"
+    // let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
+    let data= JSON.parse(localStorage.getItem("userDetails"));
+    let userId = data._id;
+    let email=data.email;
     if(userId  && key){
         try {
             let res = await fetch("http://localhost:7500/appointment/get", {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",
-                    "Authorization":`${key}`,
+                    // "Authorization":`${key}`,
                     "id":`${userId}`,
                     "email":`${email}`
                 },
