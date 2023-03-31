@@ -4,6 +4,7 @@ const { AppointmentModel } = require("../Models/AppointmentModel")
 
 const AppointmentRouter = express.Router();
 
+
 AppointmentRouter.get("/getall", async (req, res) => {
     try {
         let Data = await AppointmentModel.find({});
@@ -76,11 +77,11 @@ AppointmentRouter.post("/create", async (req, res) => {
 AppointmentRouter.patch("/update/:id", async (req, res) => {
     let payload = req.body;
     let {status} = req.body;
-    
+   // let {email} = req.headers
     let paramid = req.params.id;
     try {
         let updated = await AppointmentModel.findByIdAndUpdate({ _id: paramid }, payload)
-        res.send({ "mess": "Status Updated" })
+       
 
         
         let vetCareEmail= process.env.VetcareEmail
@@ -107,6 +108,8 @@ AppointmentRouter.patch("/update/:id", async (req, res) => {
                 console.log('Email sent')
             }
         })
+
+        res.send({ "mess": "Status Updated" })
     } catch (error) {
         // console.log(error);
         res.send({ "Error": error.message })
