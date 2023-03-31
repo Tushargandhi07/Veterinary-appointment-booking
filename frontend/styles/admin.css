@@ -1,5 +1,6 @@
 html,body{
-    height:100%
+    height:100%;
+    margin:0px
 }
 
 #nav{
@@ -131,10 +132,10 @@ a{
 }
 table{
     border:2px solid rgba(89, 79, 234, 1);
-    width:80%;
+    width:60%;
     margin-top: 5%;
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:10%;
+    margin-right:10%;
     margin-bottom: 15%;
     border-radius: 5px;
 }
@@ -169,3 +170,15 @@ td,th{
     background-color: rgba(89, 79, 234, 1);
     color: white;
 }
+
+.all-appoint{
+   display:flex;
+   justify-content: space-around;
+   margin:auto; 
+}
+select{
+    border-radius: 10px;
+    width:200px;
+    height:30px
+}
+
