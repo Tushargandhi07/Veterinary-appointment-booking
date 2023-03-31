@@ -1,56 +1,53 @@
 const navbar = () => {
   return `
-    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
-        <div class="flex">
-            <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt=""
-                loading="lazy" />
-            <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
-                data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
-                    <i class="fas fa-bars"></i>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarExample01">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#news" style="color: #fff;">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#pets" style="color: #fff;">Pets</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#adoptions" style="color: #fff;">Adoptions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#foundation" style="color: #fff;">Foundation</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#help" style="color: #fff;">How can I help?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#education" style="color: #fff;">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#about" style="color: #fff;">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#contact" style="color: #fff;">Contact</a>
-                    </li>
-                </ul>
-                <div class="collapse navbar-collapse btn-position">
-                    <ul class="navbar-nav flex-row">
-                        <li class="nav-item">
-                            <a href="./login.html" class="btn">Log in</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="./signup.html" class="btn">Sign Up</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" style="background-color: #544dcf; padding: 0 40px; display: flex; justify-content: space-between;">
+  <div class="flex">
+      <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt=""
+          loading="lazy" id="logo" style="cursor:pointer;"/>
+      <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
+              <i class="fas fa-bars"></i>
+          </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                  <a class="nav-link" aria-current="page" href="#news" style="color: #fff;">Book Appointment</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#pets" style="color: #fff;">View Appointment</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#adoptions" style="color: #fff;">Adoptions</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#help" style="color: #fff;">How can I help?</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#about" style="color: #fff;">About us</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#contact" style="color: #fff;">Contact</a>
+              </li>
+          </ul>
+          <div class="collapse navbar-collapse btn-position" style="position: absolute; right: 20px;">
+              <ul class="navbar-nav flex-row">
+                  <li class="nav-item">
+                      <a href="./login.html" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="#" class="btn"><i class="fa-solid fa-user" style="font-size: 24px; color:#fff"></i></a>
+                  </li>
+                  <li class="nav-item">
+                  <a href="#" class="btn" style="font-size: 18px; color:#fff;">User</a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</nav>
     `;
 };
 
