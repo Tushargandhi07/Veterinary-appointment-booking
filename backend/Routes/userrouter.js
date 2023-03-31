@@ -51,7 +51,16 @@ userRouter.patch("/update",async(req,res)=>{
     } catch (error) {
         res.send({"Error":error.message})
     }
+})
 
+userRouter.get("/logout",async(req,res)=>{
+    try {
+        let email=req.headers.email
+        await client.HDEL("tokensObj",email)
+        res.send({"mess":"Logout Successful"})
+    } catch (error) {
+        res.send({"Error":error.message})
+    }
 })
 
 
