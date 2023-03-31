@@ -40,10 +40,10 @@ AppointmentRouter.post("/create", async (req, res) => {
                 let vetCareEmail= process.env.VetcareEmail
                 let password= process.env.password
                 const msg = {
-                    to: "tushargan07@gmail.com",
+                    to: email,
                     from: "Vetcare",
                     subject: "Appointment",
-                    text: "Thanks for book a appointment you will be notified whenever your appointment is approved."
+                    text: "Thanks for booking an appointment you will be notified whenever your appointment is approved."
                 }
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
@@ -75,10 +75,38 @@ AppointmentRouter.post("/create", async (req, res) => {
 
 AppointmentRouter.patch("/update/:id", async (req, res) => {
     let payload = req.body;
+    let {status} = req.body;
+    
     let paramid = req.params.id;
     try {
         let updated = await AppointmentModel.findByIdAndUpdate({ _id: paramid }, payload)
         res.send({ "mess": "Status Updated" })
+
+        
+        let vetCareEmail= process.env.VetcareEmail
+        let password= process.env.password
+        const msg = {
+            to: email,
+            from: "Vetcare",
+            subject: "Registered",
+            text: `Hello ${payload.name}, your appointment has been ${status}.`
+        }
+        const transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: vetCareEmail,
+                pass: password
+            },
+            port: 425,
+            host: 'smtp.gmail.com'
+        }).sendMail(msg,(err)=>{
+            if(err){
+                console.log("Error",err)
+            }
+            else{
+                console.log('Email sent')
+            }
+        })
     } catch (error) {
         // console.log(error);
         res.send({ "Error": error.message })
