@@ -5,50 +5,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/login.css">
+    <link rel="stylesheet" href="./styles/signup.css">
+    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f584623432.js" crossorigin="anonymous"></script>
-    <title>Login | Vetcate</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Login | Vetcare</title>
 </head>
 
 <body>
-    <div class="container">
-        <main class="signup-container">
-            <h1 class="heading-primary">Log in<span class="span-blue">.</span></h1>
-            <p class="text-mute">Enter your credentials to access your account.</p>
-            <div class="login-wrapper">
-                <a href="#" class="btn btn-google">
-                    <img src="https://img.icons8.com/fluency/48/000000/google-logo.png" />
-                    Log In with Google
-                </a>
-                <div class="line-breaker">
-                    <span class="line"></span>
-                    <span>or</span>
-                    <span class="line"></span>
-                </div>
-            </div>
+<!-- Navbar Start -->
+<div id="navbar"></div>
 
-            <form class="signup-form">
-                <label class="inp">
-                    <input type="email" class="input-text" placeholder="&nbsp;">
-                    <span class="label">Email</span>
-                    <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
-                </label>
-                <label class="inp">
-                    <input type="password" class="input-text" placeholder="&nbsp;" id="password">
-                    <span class="label">Password</span>
-                    <span class="input-icon input-icon-password" data-password><i class="fa-solid fa-eye"></i></span>
-                </label>
-                <button class="btn btn-login">Login</button>
-            </form>
-            <p class="text-mute">Not a member? <a href="./signup.html">Sign up</a></p>
-        </main>
-        <div class="welcome-container">
-            <h1 class="heading-secondary">Welcome to <span class="lg">Vetcare!</span></h1>
-            <img src="./assets/injured.svg" alt="">
+    <div class="containerII">
+        
+        <div class="innerContainer">
+            <div class="box1">
+                <h1>Login to your account</h1>
+                <form action="">
+                    <label for="">Email</label>
+                    <input type="email" placeholder="Enter email" id="email">
+                    <label for="">Password</label>
+                    <input type="password" placeholder="Enter password" id="password">
+                    <input type="submit" id="submit">
+                    <p class="link">Create a new account <a href="./signup.html">Sign Up</a></p>
+                </form>
+            </div>
+            <div class="box2">
+                <img src="./assets/Petting.svg" alt="">
+            </div>
         </div>
     </div>
+
+    <!-- Footer start -->
+    <div id="footer"></div>
 </body>
 
 </html>
 
-<script src="./scripts/login.js"></script>
+<script src="./scripts/login.js" type="module"></script>
