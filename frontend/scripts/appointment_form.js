@@ -1,3 +1,17 @@
+import { navbar, footer } from "../components/navbar.js";
+let navbarContainer = document.getElementById("navbar");
+let footerContainer = document.getElementById("footer");
+
+navbarContainer.innerHTML = navbar();
+footerContainer.innerHTML = footer();
+
+// Home redirect
+let logo = document.getElementById("logo");
+logo.addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+
 let form= document.querySelector('form');
 
 form.addEventListener('submit', getAppointment);
@@ -32,12 +46,14 @@ async function getAppointment(event){
             symtoms: symtoms,
             category: category
         }
-        let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
+        // let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
+        let Data= JSON.parse(localStorage.getItem("userDetails"));
+        let email = Data.email;
         let response = await fetch("http://localhost:7500/appointment/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization":`${key}`,
+                // "Authorization":`${key}`,
                 "email":`${email}`
             },
             body: JSON.stringify(appointment)

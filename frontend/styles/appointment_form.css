@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 .container{
-    margin-top: 2%;
+    margin-top: 5%;
     padding: 2%;
 } 
 .heading{
@@ -18,6 +18,7 @@ form{
 .form_btn{
     background: rgb(124, 4, 237);
     border: 2px solid rgb(124, 4, 237);
+    padding: 5px;
     text-decoration: none;
     color: white;
     border-radius: 3px;
