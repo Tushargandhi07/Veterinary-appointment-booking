@@ -1,8 +1,11 @@
 const jwt=require("jsonwebtoken");
+const {client} = require("../config/redisDB");
 require("dotenv").config();
-const authenticator=(req,res,next)=>{
-    const token=req.headers.authorization;
-  
+const authenticator= async(req,res,next)=>{
+    // const token=req.headers.authorization;
+    const email = req.body.email
+    const token = await client.HGET("tokensObj" , email)
+    
     if(token){
         const decoded=jwt.verify(token,process.env.secret,(err,decoded)=>{
             if(err){
