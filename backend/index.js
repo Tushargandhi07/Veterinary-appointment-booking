@@ -2,6 +2,7 @@ const express=require('express');
 const cors=require('cors');
 const { connection } = require("./config/db");
 const {userRouter} = require("./Routes/UserRouter")
+const {doctorRouter} = require("./Routes/DoctorRouter")
 const {AppointmentRouter} = require("./Routes/AppointmentRouter")
 const {authenticator}  = require("./Middleware/authenticator")
 require('dotenv').config();
@@ -12,6 +13,8 @@ app.use(cors());
 
 
 app.use('/user',userRouter);
+
+app.use("/doctor",doctorRouter)
 
 app.use(authenticator)
 
