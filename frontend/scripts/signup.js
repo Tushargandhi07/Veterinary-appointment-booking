@@ -5,6 +5,25 @@ let footerContainer = document.getElementById("footer");
 navbarContainer.innerHTML = navbar();
 footerContainer.innerHTML = footer();
 
+// setting
+let userDetails = JSON.parse(localStorage.getItem("userDetails")) || null;
+let logged = JSON.parse(localStorage.getItem("loggedIn")) || null;
+if (logged) {
+  document.getElementById("user").innerText = userDetails?.name;
+  document.getElementById("loginbtn").innerText = "Logout";
+}
+
+// redirect to account/login
+let login_icon = document.getElementById("loginbtn");
+login_icon.addEventListener("click", () => {
+  if (logged) {
+    localStorage.removeItem("loggedIn");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "login.html";
+  }
+});
+
 // Home redirect
 let logo = document.getElementById("logo");
 logo.addEventListener("click", () => {
@@ -40,17 +59,27 @@ document.querySelector("form").addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      localStorage.setItem("userDetails", JSON.stringify(registerDetails));
-      Swal.fire({
-        position: "center",
-        icon: "success",
-        title: "Sign Up Successful",
-        showConfirmButton: false,
-        timer: 1500,
-      });
+      console.log(data.mess);
+      if (data.mess !== "User Registered Successfull") {
+        Swal.fire({
+          position: "center",
+          icon: "error",
+          title: "Try again",
+          showConfirmButton: true,
+        });
+      } else {
+        localStorage.setItem("userDetails", JSON.stringify(registerDetails));
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Sign Up Successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
 
-      setTimeout(function () {
-        window.location.href="login.html";
-      }, 2000);
+        setTimeout(function () {
+          window.location.href = "login.html";
+        }, 2000);
+      }
     });
 });
