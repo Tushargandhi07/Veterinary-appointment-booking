@@ -3,7 +3,7 @@ const {client} = require("../config/redisDB");
 require("dotenv").config();
 const authenticator= async(req,res,next)=>{
     // const token=req.headers.authorization;
-    const email = req.body.email
+    const email = req.headers.email
     const token = await client.HGET("tokensObj" , email)
     
     if(token){

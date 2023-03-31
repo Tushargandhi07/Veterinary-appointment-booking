@@ -37,7 +37,8 @@ async function getAppointment(event){
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization":`${key}`
+                "Authorization":`${key}`,
+                "email":`${email}`
             },
             body: JSON.stringify(appointment)
         });

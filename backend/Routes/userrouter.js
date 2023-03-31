@@ -4,17 +4,45 @@ const jwt=require("jsonwebtoken");
 const {client} = require("../config/redisDB");
 require("dotenv").config();
 const bcrypt=require("bcrypt");
+const nodemailer=require("nodemailer");
 
 const userRouter=express.Router()
 
 userRouter.post("/register",async(req,res)=>{
     let {password}=req.body;
+    let {email} = req.body;
+    let {name} = req.body;
     try {
         bcrypt.hash(password,4,async(err,hashedPassword)=>{
             req.body.password=hashedPassword
             let user=new UserModel(req.body)
             await user.save();
             res.send({"mess":"User Registered Successfull"})
+
+            let vetCareEmail= process.env.VetcareEmail
+                let password= process.env.password
+                const msg = {
+                    to: email,
+                    from: "Vetcare",
+                    subject: "Registered",
+                    text: `Thanks ${name} for creating an account in Vetcare.`
+                }
+                const transporter = nodemailer.createTransport({
+                    service: 'gmail',
+                    auth: {
+                        user: vetCareEmail,
+                        pass: password
+                    },
+                    port: 425,
+                    host: 'smtp.gmail.com'
+                }).sendMail(msg,(err)=>{
+                    if(err){
+                        console.log("Error",err)
+                    }
+                    else{
+                        console.log('Email sent')
+                    }
+                })
         })
     } catch (error) {
         console.log({"Error":error.message});
