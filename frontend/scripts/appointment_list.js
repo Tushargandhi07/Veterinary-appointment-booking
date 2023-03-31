@@ -10,6 +10,15 @@ function display(data) {
         col3.innerText = element.time;
         let col4 = document.createElement("td");
         col4.innerText = element.status;
+        if(element.status=="pending"){
+            col4.style.color = "orange"
+        }
+        else if(element.status=="accepted"){
+            col4.style.color = "green"
+        }
+        else{
+            col4.style.color = "red"
+        }
         row.append(col1, col2, col3, col4);
         tbody.append(row);
     });

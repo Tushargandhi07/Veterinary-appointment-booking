@@ -6,13 +6,22 @@
 table{
     width:80%;
     margin: auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 tr{
-    border: 1px solid rgb(225, 221, 221);
+    border: 1px solid rgb(239, 236, 236);
 }
-td,th{
+td{
     padding: 1%;
 }
+thead>tr{
+    background-color: #544dcf
+}
+th{
+    padding: 1%;
+    color: white;
+}
+
 
 @media (max-width: 450px) {
     table{
