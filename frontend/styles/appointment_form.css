@@ -10,6 +10,11 @@ body {
     margin-bottom: 4%;
 }
 
+form{
+    padding: 5%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 .form_btn{
     background: rgb(124, 4, 237);
     border: 2px solid rgb(124, 4, 237);
@@ -26,4 +31,11 @@ body {
     margin-top: 11%;
     width: 100%;
     height:86%
+}
+
+
+@media screen and (max-width:766px){
+    #img_box{
+        display: none;
+    }
 }
