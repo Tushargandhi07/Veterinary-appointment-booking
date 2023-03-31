@@ -23,9 +23,6 @@ const navbar = () => {
                   <a class="nav-link" aria-current="page" href="#adoptions" style="color: #fff;">Adoptions</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#help" style="color: #fff;">How can I help?</a>
-              </li>
-              <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#about" style="color: #fff;">About us</a>
               </li>
               <li class="nav-item">
@@ -35,13 +32,13 @@ const navbar = () => {
           <div class="collapse navbar-collapse btn-position" style="position: absolute; right: 20px;">
               <ul class="navbar-nav flex-row">
                   <li class="nav-item">
-                      <a href="./login.html" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
+                      <a href="javascript:void(0)" id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
                   </li>
                   <li class="nav-item">
                       <a href="#" class="btn"><i class="fa-solid fa-user" style="font-size: 24px; color:#fff"></i></a>
                   </li>
                   <li class="nav-item">
-                  <a href="#" class="btn" style="font-size: 18px; color:#fff;">User</a>
+                  <a href="#" id="user" class="btn" style="font-size: 18px; color:#fff;">User</a>
                   </li>
               </ul>
           </div>
