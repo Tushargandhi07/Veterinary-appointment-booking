@@ -68,7 +68,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
           showConfirmButton: true,
         });
       } else {
-        localStorage.setItem("userDetails", JSON.stringify(registerDetails));
+        // localStorage.setItem("userDetails", JSON.stringify(registerDetails));
         Swal.fire({
           position: "center",
           icon: "success",
