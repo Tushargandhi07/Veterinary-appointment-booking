@@ -28,6 +28,21 @@ The Veterinary Appointment Booking System uses the following technologies:
 - `MongoDB`: a NoSQL database that allows us to store appointment and user data.
 - `Mongoose`: an Object Data Modeling (ODM) library for MongoDB and Node.js.
 
+### Screenshots
+
+1. Landing Page
+![landing page](https://user-images.githubusercontent.com/114161535/229288911-dff994bb-cf78-48cd-a451-ef6d691adf3b.png)
+
+2. Book Appointment Page
+![book appointment](https://user-images.githubusercontent.com/114161535/229288926-8396fa11-889b-4b68-9b47-f5ff45cefa46.png)
+
+3. View Appointment Page
+![view appointment](https://user-images.githubusercontent.com/114161535/229288939-923f07b7-58ee-4018-ade6-f9846e8d7658.png)
+
+4. Login Page
+![login page](https://user-images.githubusercontent.com/114161535/229288950-f027bad5-c64a-4e23-a1d8-38ba8b285ce6.png)
+
+
 ### Installation
 To install the Veterinary Appointment Booking System, follow these steps:
 
