@@ -33,6 +33,7 @@
     margin-left: 152px;
     position: absolute;
     left: 0px;
+    
 }
 
 .hero-section-div h5 {
@@ -52,6 +53,7 @@
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    
 }
 
 .hero-section-div p {
