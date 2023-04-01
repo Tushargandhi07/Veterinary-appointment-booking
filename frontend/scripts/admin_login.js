@@ -15,8 +15,8 @@ if (logged) {
 // redirect to account/login
 let login_icon = document.getElementById("loginbtn");
 login_icon.addEventListener("click", () => {
-  if (logged) {
-    localStorage.removeItem("loggedIn");
+  if (userDetails) {
+    localStorage.removeItem("userDetails");
     window.location.href = "login.html";
   } else {
     window.location.href = "login.html";
@@ -43,7 +43,9 @@ document.querySelector("form").addEventListener("submit", (event) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    window.location.href ="admin.html";
+     setTimeout(function () {
+          window.location.href = "admin.html";
+        }, 2000);
   }
   else{
     Swal.fire({
