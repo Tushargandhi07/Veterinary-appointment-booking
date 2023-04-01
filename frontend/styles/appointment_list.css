@@ -1,5 +1,5 @@
 #title{
-    margin-top: 5%;
+    margin-top: 100px;
     margin-bottom: 2%;
     text-align: center;
 }
@@ -7,6 +7,7 @@ table{
     width:80%;
     margin: auto;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-bottom: 50px;
 }
 tr{
     border: 1px solid rgb(239, 236, 236);
@@ -20,6 +21,11 @@ thead>tr{
 th{
     padding: 1%;
     color: white;
+}
+#not_available_box{
+    margin-bottom: 250px;
+    text-align: center;
+    color: grey;
 }
 
 

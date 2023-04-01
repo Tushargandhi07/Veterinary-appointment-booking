@@ -61,9 +61,13 @@ async function getAppointment(event){
         let data= await response.json();
             if(data=="Please Login again"){
                 swal("Please login again");
+                window.location.href = "login.html";
             }
             else if(data=="Appointment Created"){
                 swal("Appointment created","","success");
+                setTimeout(()=>{
+                    window.location.href = "appointment_list.html";
+                },2000)
             }
             else{
                 swal("Slot Not Available","Try a diffrent time slot","error");

@@ -12,7 +12,7 @@ AppointmentRouter.get("/getall", async (req, res) => {
     } catch (error) {
         res.send({ "Error": error.message });
     }
-})
+});
 
 AppointmentRouter.get("/get", async (req, res) => {
     let ID = req.headers.id
@@ -77,7 +77,7 @@ AppointmentRouter.post("/create", async (req, res) => {
 AppointmentRouter.patch("/update/:id", async (req, res) => {
     let payload = req.body;
     let {status} = req.body;
-   // let {email} = req.headers
+    let email = req.headers.email
     let paramid = req.params.id;
     try {
         let updated = await AppointmentModel.findByIdAndUpdate({ _id: paramid }, payload)
