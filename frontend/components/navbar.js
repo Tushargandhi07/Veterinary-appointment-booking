@@ -14,10 +14,10 @@ const navbar = () => {
       <div class="collapse navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="#news" style="color: #fff;">Book Appointment</a>
+                  <a class="nav-link" aria-current="page" href="appointment_form.html" style="color: #fff;">Book Appointment</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#pets" style="color: #fff;">View Appointment</a>
+                  <a class="nav-link" aria-current="page" href="appointment_list.html" style="color: #fff;">View Appointment</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#adoptions" style="color: #fff;">Adoptions</a>
@@ -35,7 +35,7 @@ const navbar = () => {
                       <a href="javascript:void(0)" id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
                   </li>
                   <li class="nav-item">
-                      <a href="#" class="btn"><i class="fa-solid fa-user" style="font-size: 24px; color:#fff"></i></a>
+                      <a href="user_profile.html" class="btn"><i class="fa-solid fa-user" style="font-size: 24px; color:#fff"></i></a>
                   </li>
                   <li class="nav-item">
                   <a href="#" id="user" class="btn" style="font-size: 18px; color:#fff;">User</a>
