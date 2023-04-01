@@ -39,13 +39,13 @@ function display(data) {
         tbody.append(row);
     });
 }
+
+let not_available= document.getElementById("not_available");
 async function getData() {
     // let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
     let data= JSON.parse(localStorage.getItem("userDetails"));
-    console.log(data)
     let userId = data._id;
     let email=data.email;
-    console.log(email,userId);
     if(userId){
         try {
             let res = await fetch("http://localhost:7500/appointment/get", {
@@ -58,7 +58,10 @@ async function getData() {
                 },
             })
             let data = await res.json();
-            console.log(data);
+            if(data.length > 0){
+                not_available.style.display = "none";
+            }
+            console.log(data)
             display(data);
         } catch (error) {
             console.log(error);
