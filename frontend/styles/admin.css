@@ -9,7 +9,8 @@ html,body{
     text-align: center;
     background: linear-gradient(90deg, rgba(89, 79, 234, 1) 0%, rgba(163, 50, 157, 1) 99%);
     color:rgb(242, 225, 225);
-    padding:3px
+    padding:3px;
+    
 }
 
 
