@@ -1,5 +1,6 @@
-let email="owais@gmail.com"
+let {email,name}=JSON.parse(localStorage.getItem("userDetails"))
 let Dat ;
+
 async function getData() {
   let key ="owais@gmail.com"
   
@@ -84,9 +85,9 @@ function showAppointments(Data){
         method:"PATCH",
         headers:{
           "Content-Type": "application/json",
-          email:`${email}`
+          "email":`${email}`
         },
-        body:JSON.stringify({status:"approved"})
+        body:JSON.stringify({status:"approved",name:name})
     })
     .then(res=>res.json())
     .then(res=>{
@@ -102,7 +103,7 @@ function showAppointments(Data){
         method:"PATCH",
         headers:{
           "Content-Type": "application/json",
-          email:`${email}`
+          "email":`${email}`
         },
         body:JSON.stringify({status:"rejected"})
     })
