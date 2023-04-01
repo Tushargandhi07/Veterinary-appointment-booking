@@ -17,39 +17,6 @@
     width: 5px;
 }
 
-/* Color of the links BEFORE scroll */
-/* .navbar-scroll .nav-link,
-.navbar-scroll .fa-bars,
-.navbar-scroll .navar-brand {
-    color: #4f4f4f;
-} */
-
-/* .navbar-scroll .nav-link:hover {
-    color: #1266f1;
-} */
-
-/* Color of the links AFTER scroll */
-/* .navbar-scrolled .nav-link,
-.navbar-scrolled .fa-bars,
-.navbar-scrolled .navar-brand {
-    color: #4f4f4f;
-} */
-
-/* Color of the navbar AFTER scroll */
-/* .navbar-scroll,
-.navbar-scrolled {
-    background-color: #fff;
-} */
-
-/* An optional height of the navbar AFTER scroll */
-/* .navbar.navbar-scroll.navbar-scrolled {
-    padding-top: 5px;
-    padding-bottom: 5px;
-} */
-
-
-
-
 /* =================== Hero Section ======================== */
 
 .hero-section {
@@ -578,5 +545,124 @@
 
     .pet-connection-innerDiv {
         width: 90%;
+    }
+}
+
+@media only screen and (max-width: 400px) and (min-width: 200px) {
+    .hero-section-div {
+        text-align: center;
+        margin-left: -45%;
+        padding: 0 60px;
+    }
+
+    .hero-section-div h5 {
+        font-size: 26px;
+        line-height: 24px;
+    }
+
+    .hero-section-div h1 {
+        font-size: 26px;
+        line-height: 24px;
+    }
+
+    .hero-section-div p {
+        font-size: 14px;
+        line-height: 22px;
+        padding: 0 100px;
+    }
+
+    .hero-section-div a {
+        width: 180px;
+        padding: 16px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        margin-left: 32%;
+    }
+
+    .book-with-confidence-innerText {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .book-with-confidence-innerDiv {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 25px;
+        padding: 10px 0px;
+    }
+
+    .book-with-confidence-innerDiv img {
+        width: 200px;
+    }
+
+    .book-with-confidence-innerDiv h3 {
+        font-size: 18px;
+    }
+
+    .book-with-confidence-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .book-with-confidence>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .banner-div {
+        padding: 10px 15px;
+    }
+
+    .banner-innerDiv h3 {
+        font-size: 18px;
+    }
+
+    .banner-innerDiv p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .pet-parents h1 {
+        font-size: 24px;
+    }
+
+    .pet-parents div {
+        width: 90%;
+    }
+
+    .pet-parents div p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .pet-connection h1 {
+        font-size: 24px;
+    }
+
+    .pet-connection-innerDiv {
+        width: 90%;
+    }
+
+    .pet-connection>div>p {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .grid {
+        padding: 10px 0px;
+    }
+
+    .grid-card>div>h3 {
+        font-size: 18px;
+        list-style: 20px;
+    }
+
+    .grid-card>div>p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .grid-card>div>a {
+        font-size: 14px;
     }
 }
