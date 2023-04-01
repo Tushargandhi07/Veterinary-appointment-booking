@@ -1,0 +1,36 @@
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    #navbarExample01 {
+        display: flex;
+        align-items: center;
+    }
+
+    #navUL {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px) and (min-width: 200px) {
+    #navbarExample01 {
+        display: flex;
+        align-items: center;
+    }
+
+    #navUL {
+        display: none;
+    }
+
+    #user {
+        display: none;
+    }
+
+    #logo {
+        height: 50px;
+        margin-left: -20px;
+        padding: 4px;
+    }
+
+}
+
+#logo {
+    padding: 6px;
+}

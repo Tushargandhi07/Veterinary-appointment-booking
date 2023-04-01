@@ -4,15 +4,8 @@ const navbar = () => {
   <div class="flex">
       <img src="https://mdbootstrap.com/img/Photos/new-templates/animal-shelter/logo.png" height="70" alt=""
           loading="lazy" id="logo" style="cursor:pointer;"/>
-      <button class="navbar-toggler ps-0" type="button" data-mdb-toggle="collapse"
-          data-mdb-target="#navbarExample01" aria-controls="navbarExample01" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon d-flex justify-content-start align-items-center">
-              <i class="fas fa-bars"></i>
-          </span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarExample01">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <div class="navbar-collapse" id="navbarExample01">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row" id="navUL">
               <li class="nav-item active">
                   <a class="nav-link" aria-current="page" href="appointment_form.html" style="color: #fff;">Book Appointment</a>
               </li>
@@ -29,7 +22,7 @@ const navbar = () => {
                   <a class="nav-link" aria-current="page" href="#contact" style="color: #fff;">Contact</a>
               </li>
           </ul>
-          <div class="collapse navbar-collapse btn-position" style="position: absolute; right: 20px;">
+          <div class="btn-position" style="position: absolute; right: 20px;" id="Show">
               <ul class="navbar-nav flex-row">
                   <li class="nav-item">
                       <a href="javascript:void(0)" id="loginbtn" class="btn" style="background-color: #e54391; padding: 6px 20px; color: #fff; margin: 0 10px;">Log in</a>
