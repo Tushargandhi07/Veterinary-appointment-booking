@@ -33,16 +33,16 @@ let login_icon = document.getElementById("loginbtn");
 login_icon.addEventListener("click", () => {
   if (userDetails) {
     localStorage.removeItem("userDetails");
-    window.location.href = "../../../frontend/login.html";
+    window.location.href = "../../login.html";
   } else {
-    window.location.href = "../../../frontend/login.html";
+    window.location.href = "../../login.html";
   }
 });
 
 // Home redirect
 let logo = document.getElementById("logo");
 logo.addEventListener("click", () => {
-  window.location.href = "../../../frontend/index.html";
+  window.location.href = "../../index.html";
 });
 
 
@@ -53,7 +53,7 @@ let navRedirect = document.getElementById("navredirect");
 navRedirect.addEventListener("click", () => {
   if (userDetails) {
 
-    window.location.href = "../../../frontend/appointment_form.html";
+    window.location.href = "../../appointment_form.html";
     
   } else {
     Swal.fire({

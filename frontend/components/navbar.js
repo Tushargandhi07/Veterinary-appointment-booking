@@ -7,7 +7,7 @@ const navbar = () => {
       <div class="navbar-collapse" id="navbarExample01">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row" id="navUL">
               <li class="nav-item active">
-                  <a class="nav-link" aria-current="page" href="javascript:void(0)" id="navredirect" onclick="chhodyare" style="color: #fff;">Book Appointment</a>
+                  <a class="nav-link" aria-current="page"  id="navredirect"  style="color: #fff;">Book Appointment</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="appointment_list.html" style="color: #fff;">View Appointment</a>
