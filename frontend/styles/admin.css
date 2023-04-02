@@ -31,11 +31,22 @@ html,body{
 
 #after-nav-col-2{
     width:80%;
+   
+}
+
+.remove{
+    width:80%;
     display: flex;
     
     justify-content: center;
 }
 
+.appprov{
+    width:80%;
+    display: flex;
+    
+    justify-content: center;
+}
 .row{
     border-bottom: 1px solid #c6c6c6;
     padding:4px;
@@ -214,14 +225,18 @@ td,th{
     padding: 18px;
 }
 
-.all-appoint{
-   display:flex;
-   justify-content: space-around;
-   margin:auto; 
-}
+
 select{
     border-radius: 10px;
     width:200px;
     height:30px
 }
 
+#chek{
+    display: flex;
+    
+}
+
+.chekin{
+    margin-left:20px
+}
