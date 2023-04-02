@@ -11,12 +11,12 @@ logo.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 
+let form = document.querySelector("form");
 
-let form= document.querySelector('form');
-
-form.addEventListener('submit', getAppointment);
+form.addEventListener("submit", getAppointment);
 
 // function to post a appointment
+
 async function getAppointment(event){
     event.preventDefault();
     let name = document.getElementById("name").value;
@@ -72,7 +72,8 @@ async function getAppointment(event){
             else{
                 swal("Slot Not Available","Try a diffrent time slot","error");
             }
-    }
+    
+  }
 }
 
 // setting username
@@ -93,4 +94,3 @@ login_icon.addEventListener("click", () => {
     window.location.href = "login.html";
   }
 });
-
