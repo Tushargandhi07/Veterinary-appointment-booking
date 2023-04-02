@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,67 +9,81 @@
     <link rel="stylesheet" href="./styles/admin.css">
     <link rel="shortcut icon" href="./assets/icons8-guide-dog-48.png" type="image/x-icon">
 </head>
+
 <body>
     <div id="nav">
-        <a href="./index.html"> <h1 style="color: white;">Admin panel</h1></a>
-       
-        
- </div>
- <div id="after-nav">
-     <div id="after-nav-col-1" >
-        
-        <div class="row">
-         <a href="./admin.html"> <h2>Manage Appointments</h2></a>   
-         </div>
-         <div class="row">
-             <a href="./add-doctor.html"><h2>Add Veterinarian</h2></a>    
-         </div>
-         <div class="row">
-             <a href="./remove-doctor.html"> <h2>Remove Veterinarian</h2></a>   
-         </div>
+        <a href="./index.html">
+            <h1 style="color: white;">Admin panel</h1>
+        </a>
 
-     </div>
-     <div id="after-nav-col-2" class="side-part appointment all-appoint">
-        <table id="customers">
-            <thead>
-                <tr>
-                    <th scope="col">Appointment Id</th>
-                    <th scope="col">Date</th>
-                    <th scope="col">Time</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Veterinarian</th>
-                    <th scope="col">Approve</th>
-                    <th scope="col">Reject</th>
-                </tr>
-            </thead>
-            <tbody id="appointment">
-            </tbody>
-        </table>
-        <div>
-            <h1>Filter Appointments:</h1>
-            <div>
-                <label><h2>Status:</h2></label>
-                <select id="myselect">
-                    <option value="">Select Status</option>
-                   <option value="pending">Pending</option>
-                   <option value="approved">Approved</option>
-                   <option value="rejected">Rejected</option>
-                </select>
-           </div>
-           <div>
-            <label><h2>Veterinarian:</h2></label>
-              <select id="mydoctor">
-                <option value="">Select Veterinarian</option>
-                <option value="pardeep gupta">Dr.Pardeep Gupta</option>
-                <option value="subhash mittal">Dr. Subhash Mittal</option>
-                <option value="gaurav sharma">Dr. Gaurav Sharma</option>
-                <option value="vivek jindal">Dr. Vivek Jindal</option>
-              </select>
-           </div>
+
+    </div>
+    <div id="after-nav">
+        <div id="after-nav-col-1">
+
+            <div class="row">
+                <a href="./admin.html">
+                    <h2>Manage Appointments</h2>
+                </a>
+            </div>
+            <div class="row">
+                <a href="./add-doctor.html">
+                    <h2>Add Veterinarian</h2>
+                </a>
+            </div>
+            <div class="row">
+                <a href="./remove-doctor.html">
+                    <h2>Remove Veterinarian</h2>
+                </a>
+            </div>
+
         </div>
-       
-     </div>
- </div>
- <script src="./scripts/mange-appointment.js"></script>
+        <div id="after-nav-col-2" class="side-part appointment all-appoint">
+            <table id="customers">
+                <thead>
+                    <tr>
+                        <th scope="col">Appointment Id</th>
+                        <th scope="col">Date</th>
+                        <th scope="col">Time</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Veterinarian</th>
+                        <th scope="col">Approve</th>
+                        <th scope="col">Reject</th>
+                    </tr>
+                </thead>
+                <tbody id="appointment">
+                </tbody>
+            </table>
+            <div>
+                <h1>Filter Appointments:</h1>
+                <div>
+                    <label>
+                        <h2>Status:</h2>
+                    </label>
+                    <select id="myselect">
+                        <option value="">Select Status</option>
+                        <option value="pending">Pending</option>
+                        <option value="approved">Approved</option>
+                        <option value="rejected">Rejected</option>
+                    </select>
+                </div>
+                <div>
+                    <label>
+                        <h2>Veterinarian:</h2>
+                    </label>
+                    <select id="mydoctor">
+                        <option value="">Select Veterinarian</option>
+                        <option value="pardeep gupta">Dr.Pardeep Gupta</option>
+                        <option value="subhash mittal">Dr. Subhash Mittal</option>
+                        <option value="gaurav sharma">Dr. Gaurav Sharma</option>
+                        <option value="vivek jindal">Dr. Vivek Jindal</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="./scripts/mange-appointment.js"></script>
 </body>
+
 </html>

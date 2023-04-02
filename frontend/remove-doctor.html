@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove Veterinarian</title>
-    <link rel="stylesheet" href="styles/admin.css"> 
+    <link rel="stylesheet" href="styles/admin.css">
     <link rel="shortcut icon" href="./assets/icons8-guide-dog-48.png" type="image/x-icon">
     </style>
 </head>
+
 <body>
     <div id="nav">
         <h1>Admin Panel</h1>
     </div>
     <div id="after-nav">
-        <div id="after-nav-col-1" >
-         
-           <div class="row">
-            <a href="./admin.html"> <h2>Manage Appointments</h2></a>   
+        <div id="after-nav-col-1">
+
+            <div class="row">
+                <a href="./admin.html">
+                    <h2>Manage Appointments</h2>
+                </a>
             </div>
             <div class="row">
-                <a href="./add-doctor.html"><h2>Add Veterinarian</h2></a>    
+                <a href="./add-doctor.html">
+                    <h2>Add Veterinarian</h2>
+                </a>
             </div>
             <div class="row">
-                <a href="./remove-doctor.html"> <h2>Remove Veterinarian</h2></a>   
+                <a href="./remove-doctor.html">
+                    <h2>Remove Veterinarian</h2>
+                </a>
             </div>
 
         </div>
@@ -33,69 +41,70 @@
                     <div class="heading">
                         <h1>Remove Veterinarian</h1>
                     </div>
-                    
+
                     <div class="ad-row">
-                       <label>ID:</label>
-                        <input placeholder="Name" id="name"/>
+                        <label>ID:</label>
+                        <input placeholder="Name" id="name" />
                     </div>
-                    <div  class="ad-row">
-                     <button id="btn2" class="remove-btn btn">REMOVE</button>
+                    <div class="ad-row">
+                        <button id="btn2" class="remove-btn btn">REMOVE</button>
                     </div>
-                    
-                    
-                    
-              
-             </div>
+
+
+
+
+                </div>
             </div>
         </div>
-        <script >
-            
+        <script>
+
             let btn2 = document.getElementById("btn2")
-                  btn2.addEventListener("click",(event)=>{
-                  event.preventDefault();
-                  let all_input = document.querySelector(".add-form input")
+            btn2.addEventListener("click", (event) => {
+                event.preventDefault();
+                let all_input = document.querySelector(".add-form input")
                 let name = all_input.value;
-                
-                 getid(name);
-    
-                })
 
-                async function getid(name) {
-                    try {
-               let res = await fetch("http://localhost:7500/doctor/getDocID", {
-                  method: "GET",
-                  headers: {
-                  "Content-Type": "application/json",
-                  "name":`${name}`
-                  
-                },
-              
-                 })
-                let data = await res.json();
-                 let id = data.ID
-                 dellete(id)
-              
-               } catch (error) {
-                   console.log(error);
-               }
-                   }
+                getid(name);
 
-                function dellete(id){
-                    fetch(`http://localhost:7500/doctor/delete/?${id}`,{
-                        method:"DELETE",
-                        
+            })
+
+            async function getid(name) {
+                try {
+                    let res = await fetch("http://localhost:7500/doctor/getDocID", {
+                        method: "GET",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "name": `${name}`
+
+                        },
+
                     })
-                        .then(res=>res.json())
-                        .then(res=>{
-                           res.send("successfully deleted")
-                           alert("veternaian removed successfully")
-                        })
-                        .catch((err)=>console.log(err))
-                     }
-                
-                   
-                
-                   
+                    let data = await res.json();
+                    let id = data.ID
+                    dellete(id)
+
+                } catch (error) {
+                    console.log(error);
+                }
+            }
+
+            function dellete(id) {
+                fetch(`http://localhost:7500/doctor/delete/?${id}`, {
+                    method: "DELETE",
+
+                })
+                    .then(res => res.json())
+                    .then(res => {
+                        res.send("successfully deleted")
+                        alert("veternaian removed successfully")
+                    })
+                    .catch((err) => console.log(err))
+            }
+
+
+
+
         </script>
 </body>
+
 </html>
