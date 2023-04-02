@@ -20,7 +20,7 @@ form.addEventListener('submit', getAppointment);
 async function getAppointment(event){
     event.preventDefault();
     let name = document.getElementById("name").value;
-    let Email = document.getElementById("email").value;
+    let Email = JSON.parse(localStorage.getItem("userDetails"));
     let phone = document.getElementById("phone").value;
     let date = document.getElementById("date").value;
     let time = document.getElementById("time").value;
@@ -38,7 +38,7 @@ async function getAppointment(event){
     else{
         let appointment = {
             name: name,
-            email: Email,
+            email: Email.email,
             phone: phone,
             date: date,
             time: time,

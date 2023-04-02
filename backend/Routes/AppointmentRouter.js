@@ -75,8 +75,11 @@ AppointmentRouter.post("/create", async (req, res) => {
 
 
 AppointmentRouter.patch("/update/:id", async (req, res) => {
+    let num=Math.floor(Math.random()*(9999-1000)+1000)
     let payload = req.body;
     let {status,name} = req.body;
+    req.body.roomId=num;
+
     // console.log(name,req.body);
     let email = req.headers.email
     let paramid = req.params.id;
@@ -88,7 +91,7 @@ AppointmentRouter.patch("/update/:id", async (req, res) => {
             to: email,
             from: "Vetcare",
             subject: "Appointment",
-            text: `Hello ${name}, your appointment has been ${status}.`
+            text: `Hello ${name}, your appointment has been ${status}, Put ${num} room id to connect with your veterinarian`
         }
         const transporter = nodemailer.createTransport({
             service: 'gmail',

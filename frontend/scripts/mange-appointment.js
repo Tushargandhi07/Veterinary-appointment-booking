@@ -1,6 +1,5 @@
-let {email,name}=JSON.parse(localStorage.getItem("userDetails"))
+let {email,name}=JSON.parse(localStorage.getItem("userDetailsforadmin"))
 let Dat ;
-
 async function getData() {
   let key ="owais@gmail.com"
   
@@ -10,7 +9,7 @@ async function getData() {
               method: "GET",
               headers: {
                   "Content-Type": "application/json",
-                  email:`${email}`
+                  "email":`${email}`
                   
               },
               

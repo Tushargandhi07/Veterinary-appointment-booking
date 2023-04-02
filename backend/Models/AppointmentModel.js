@@ -9,7 +9,8 @@ const appointmentSchema= mongoose.Schema({
     date:String,
     time:String,
     symtoms:String,
-    category:String, 
+    category:String,
+    roomId:Number, 
     status:{ type: String, default: "pending"}
 },{
     versionKey:false

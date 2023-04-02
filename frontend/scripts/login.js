@@ -67,6 +67,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
         });
       } else {
         localStorage.setItem("userDetails", JSON.stringify(data.User));
+        localStorage.setItem("userDetailsforadmin", JSON.stringify(data.User));
         Swal.fire({
           position: "center",
           icon: "success",
