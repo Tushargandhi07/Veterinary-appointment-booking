@@ -1,4 +1,5 @@
-let {email,name}=JSON.parse(localStorage.getItem("userDetailsforadmin"))
+let {email,name}=JSON.parse(localStorage.getItem("userDetailsforadmin"));
+
 let Dat ;
 async function getData() {
   let key ="owais@gmail.com"
@@ -49,6 +50,9 @@ function showAppointments(Data){
         </td>
         <td>
         <h4>${item.doctor}</h4>
+        </td>
+        <td id="room">
+        <h4>${item.roomId  || "NA"}</h4>
         </td>
         <td>
           <button class="accept btn3" data-id=${item._id}>Approve</button>
