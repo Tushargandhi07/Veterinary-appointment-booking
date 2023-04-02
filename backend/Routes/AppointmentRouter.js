@@ -12,7 +12,7 @@ AppointmentRouter.get("/getall", async (req, res) => {
     } catch (error) {
         res.send({ "Error": error.message });
     }
-})
+});
 
 AppointmentRouter.get("/get", async (req, res) => {
     let ID = req.headers.id
@@ -76,21 +76,19 @@ AppointmentRouter.post("/create", async (req, res) => {
 
 AppointmentRouter.patch("/update/:id", async (req, res) => {
     let payload = req.body;
-    let {status} = req.body;
-   // let {email} = req.headers
+    let {status,name} = req.body;
+    // console.log(name,req.body);
+    let email = req.headers.email
     let paramid = req.params.id;
     try {
         let updated = await AppointmentModel.findByIdAndUpdate({ _id: paramid }, payload)
-       
-
-        
         let vetCareEmail= process.env.VetcareEmail
         let password= process.env.password
         const msg = {
             to: email,
             from: "Vetcare",
-            subject: "Registered",
-            text: `Hello ${payload.name}, your appointment has been ${status}.`
+            subject: "Appointment",
+            text: `Hello ${name}, your appointment has been ${status}.`
         }
         const transporter = nodemailer.createTransport({
             service: 'gmail',
