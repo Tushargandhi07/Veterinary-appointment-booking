@@ -29,8 +29,27 @@ th{
 }
 
 
-@media (max-width: 450px) {
-    table{
-        width: 100%;
+@media (max-width: 550px) {
+    table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px;
+        font-size: 12px;
+    }
+    #title {
+        font-size: 20px;
+    }
+}
+@media (max-width: 350px) {
+    table {
+        font-size: 10px;
+    }
+    th, td {
+        padding: 5px;
+        font-size: 10px;
+    }
+    #title {
+        font-size: 15px;
     }
 }
