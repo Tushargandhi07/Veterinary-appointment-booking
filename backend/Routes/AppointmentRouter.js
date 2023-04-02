@@ -44,7 +44,7 @@ AppointmentRouter.post("/create", async (req, res) => {
                     to: email,
                     from: "Vetcare",
                     subject: "Appointment",
-                    text: "Thanks for booking an appointment you will be notified whenever your appointment is approved."
+                    text: "Thanks for booking an appointment you will be notified whenever your appointment will be approved."
                 }
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
@@ -91,7 +91,7 @@ AppointmentRouter.patch("/update/:id", async (req, res) => {
             to: email,
             from: "Vetcare",
             subject: "Appointment",
-            text: `Hello ${name}, your appointment has been ${status}, Put ${num} room id to connect with your veterinarian`
+            text: `Hello ${name}, your appointment has been ${status}, Put ${num} room id to connect with your veterinarian, You can proceed with the CONNECT section of the website`
         }
         const transporter = nodemailer.createTransport({
             service: 'gmail',

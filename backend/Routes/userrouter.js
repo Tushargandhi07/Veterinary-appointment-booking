@@ -25,7 +25,7 @@ userRouter.post("/register",async(req,res)=>{
                     to: email,
                     from: "Vetcare",
                     subject: "Registered",
-                    text: `Thanks ${name} for creating an account in Vetcare.`
+                    text: `Thanks ${name} for creating an account with Vetcare.`
                 }
                 const transporter = nodemailer.createTransport({
                     service: 'gmail',
