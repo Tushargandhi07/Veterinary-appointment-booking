@@ -83,7 +83,7 @@ const footer = () => {
 
                 <!--Grid column-->
                 <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-                    <h5 class="text-uppercase mb-4">Animals</h5>
+                    <h5 class="text-uppercase mb-4">VetCare</h5>
 
                     <ul class="list-unstyled">
                         <li class="mb-2">
@@ -151,7 +151,7 @@ const footer = () => {
                             <p><i class="fas fa-phone pe-2 mr-2"></i>+ 01 234 567 89</p>
                         </li>
                         <li>
-                            <p><i class="fas fa-envelope pe-2 mb-0 mr-2"></i>contact@example.com</p>
+                            <p><i class="fas fa-envelope pe-2 mb-0 mr-2"></i>vetcare@gmail.com</p>
                         </li>
                     </ul>
                 </div>
