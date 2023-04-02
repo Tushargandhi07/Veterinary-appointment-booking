@@ -13,13 +13,10 @@ const navbar = () => {
                   <a class="nav-link" aria-current="page" href="appointment_list.html" style="color: #fff;">View Appointment</a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#adoptions" style="color: #fff;">Adoptions</a>
+                  <a class="nav-link" aria-current="page" href="../videosharing/frontend/index.html" style="color: #fff;">Connect</a>
               </li>
               <li class="nav-item">
                   <a class="nav-link" aria-current="page" href="#about" style="color: #fff;">About us</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="#contact" style="color: #fff;">Contact</a>
               </li>
           </ul>
           <div class="btn-position" style="position: absolute; right: 20px;" id="Show">
