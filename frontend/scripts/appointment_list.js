@@ -54,7 +54,7 @@ async function getData() {
   let email = data.email;
   if (userId) {
     try {
-      let res = await fetch("http://localhost:7500/appointment/get", {
+      let res = await fetch("https://vetcare-89zg.onrender.com/appointment/get", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",

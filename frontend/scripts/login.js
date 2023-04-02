@@ -41,7 +41,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     password,
   };
 
-  fetch("http://localhost:7500/user/login", {
+  fetch("https://vetcare-89zg.onrender.com/user/login", {
     method: "POST",
     body: JSON.stringify(loginDetails),
     headers: {

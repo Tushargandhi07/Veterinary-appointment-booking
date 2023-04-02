@@ -6,7 +6,7 @@ async function getData() {
   
   if( key){
       try {
-          let res = await fetch("http://localhost:7500/appointment/getall", {
+          let res = await fetch("https://vetcare-89zg.onrender.com/appointment/getall", {
               method: "GET",
               headers: {
                   "Content-Type": "application/json",
@@ -84,7 +84,7 @@ function showAppointments(Data){
    }
 
    function accept(id){
-    fetch(`http://localhost:7500/appointment/update/${id}`,{
+    fetch(`https://vetcare-89zg.onrender.com/appointment/update/${id}`,{
         method:"PATCH",
         headers:{
           "Content-Type": "application/json",
@@ -102,7 +102,7 @@ function showAppointments(Data){
     })
   }
   function reject(id){
-    fetch(`http://localhost:7500/appointment/update/${id}`,{
+    fetch(`https://vetcare-89zg.onrender.com/appointment/update/${id}`,{
         method:"PATCH",
         headers:{
           "Content-Type": "application/json",

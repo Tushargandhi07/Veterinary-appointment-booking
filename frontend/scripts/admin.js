@@ -17,7 +17,7 @@ btn.addEventListener("click",(event)=>{
 async function addDoctor(obj){
     try {
         console.log(obj)
-       let adding_rqst=await fetch("http://localhost:7500/doctor/register",{
+       let adding_rqst=await fetch("https://vetcare-89zg.onrender.com/doctor/register",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"

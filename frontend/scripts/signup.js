@@ -50,7 +50,7 @@ document.querySelector("form").addEventListener("submit", (event) => {
     petage,
   };
 
-  fetch("http://localhost:7500/user/register", {
+  fetch("https://vetcare-89zg.onrender.com/user/register", {
     method: "POST",
     body: JSON.stringify(registerDetails),
     headers: {
