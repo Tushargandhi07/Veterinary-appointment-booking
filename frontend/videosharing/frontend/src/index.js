@@ -1,4 +1,4 @@
-import { navbar, footer } from "../../../frontend/components/navbar.js";
+import { navbar, footer } from "../../../components/navbar.js";
 // const socket = io('http://localhost:8080/');
 let navbarContainer = document.getElementById("navbar");
 let footerContainer = document.getElementById("footer");

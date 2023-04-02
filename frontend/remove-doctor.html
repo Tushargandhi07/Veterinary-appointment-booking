@@ -34,7 +34,7 @@
                 </a>
             </div>
             <div class="row">
-                <a href="../videosharing/frontend/index.html"> <h2>Virtual Meet</h2></a>   
+                <a href="./videosharing/frontend/index.html"> <h2>Virtual Meet</h2></a>   
             </div>
 
         </div>
@@ -73,7 +73,7 @@
 
             async function getid(name) {
                 try {
-                    let res = await fetch("http://localhost:7500/doctor/getDocID", {
+                    let res = await fetch("https://vetcare-89zg.onrender.com/doctor/getDocID", {
                         method: "GET",
                         headers: {
                             "Content-Type": "application/json",
@@ -92,7 +92,7 @@
             }
 
             function dellete(id) {
-                fetch(`http://localhost:7500/doctor/delete/?${id}`, {
+                fetch(`https://vetcare-89zg.onrender.com/doctor/delete/?${id}`, {
                     method: "DELETE",
 
                 })

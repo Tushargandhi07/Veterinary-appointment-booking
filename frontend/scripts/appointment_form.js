@@ -49,7 +49,7 @@ async function getAppointment(event){
         // let key ="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDI1NjcwYzRmZjJhY2RlYTRmZDQ0MWUiLCJpYXQiOjE2ODAxNzI4MzN9.WPSwGoSicD9yx25IxL1lkd1a8SnwzkicUTn_WvS6itA"
         let Data= JSON.parse(localStorage.getItem("userDetails"));
         let email = Data.email;
-        let response = await fetch("http://localhost:7500/appointment/create", {
+        let response = await fetch("https://vetcare-89zg.onrender.com/appointment/create", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
