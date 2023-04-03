@@ -5,6 +5,7 @@
 </div>
 
 # Veterinary Appointment Booking System
+we are live at https://cool-elf-0374a9.netlify.app/
 
 This project is a web-based appointment booking system for a veterinary clinic. It allows users to book appointments, view their appointments, and manage their profiles. Admin users can manage appointments, view appointment data, and manage users.
 
@@ -29,10 +30,16 @@ The Veterinary Appointment Booking System has the following features:
 ### Technologies Used
 The Veterinary Appointment Booking System uses the following technologies:
 
+#### For the client side -
+- `HTML` `CSS` `JavaScript`
+
+#### For the beckend side -
 - `Node.js`: a JavaScript runtime environment that allows us to run JavaScript on the server.
 - `Express`: a framework for building web applications on top of Node.js.
 - `MongoDB`: a NoSQL database that allows us to store appointment and user data.
 - `Mongoose`: an Object Data Modeling (ODM) library for MongoDB and Node.js.
+- `Web RTC`
+- `Websockets`
 
 ### Screenshots
 
