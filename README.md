@@ -31,7 +31,7 @@ The Veterinary Appointment Booking System has the following features:
 The Veterinary Appointment Booking System uses the following technologies:
 
 #### For the client side -
-- `HTML` `CSS` `JavaScript`
+- `HTML` `CSS` `JavaScript` `Bootstraps`
 
 #### For the beckend side -
 - `Node.js`: a JavaScript runtime environment that allows us to run JavaScript on the server.
