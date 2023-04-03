@@ -63,6 +63,9 @@ The Veterinary Appointment Booking System uses the following technologies:
 
 ![image](https://user-images.githubusercontent.com/114161535/229353448-a7f3c37b-eeac-40ab-8527-cef4d08b686b.png)
 
+![image](https://user-images.githubusercontent.com/114161535/229457696-d5f479ec-160c-4975-a16f-79eb4c883fee.png)
+
+
 
 ### Installation
 To install the Veterinary Appointment Booking System, follow these steps:
